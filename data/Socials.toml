@@ -14,28 +14,42 @@
 
 [[socials]]
     id = "email"
-    url = "mailto:reuixiy@gmail.com"
+    url = "mailto:sandldan@sandldan.com"
     icon = "envelope"
     title = "Email"
     weight = 2
 
 [[socials]]
     id = "github"
-    url = "https://github.com/reuixiy"
+    url = "https://github.com/sandldan"
     icon = "github"
     title = "GitHub"
     weight = 3
 
 [[socials]]
     id = "twitter"
-    url = "https://twitter.com/reuixiy"
+    url = "https://twitter.com/sandldan"
     icon = "twitter"
     title = "Twitter"
     weight = 4
 
 [[socials]]
-    id = "telegram"
-    url = "https://t.me/yixiuer"
-    icon = "telegram"
-    title = "Telegram"
+    id = "Instagram"
+    url = "https://instagram.com/sandldan"
+    icon = "instagram"
+    title = "instagram"
     weight = 5
+
+[[socials]]
+    id = "Linkedin"
+    url = "https://www.linkedin.com/in/sandldan/"
+    icon = "linkedin"
+    title = "linkedin"
+    weight = 6
+#
+#[[socials]]
+#    id = "telegram"
+#    url = "https://t.me/yixiuer"
+#    icon = "telegram"
+#    title = "Telegram"
+#    weight = 5

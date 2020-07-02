@@ -26,12 +26,12 @@
     title = "GitHub"
     weight = 3
 
-[[socials]]
-    id = "twitter"
-    url = "https://twitter.com/sandldan"
-    icon = "twitter"
-    title = "Twitter"
-    weight = 4
+# [[socials]]
+#    id = "twitter"
+#    url = "https://twitter.com/sandldan"
+#    icon = "twitter"
+#    title = "Twitter"
+#    weight = 4
 
 [[socials]]
     id = "Instagram"
@@ -44,7 +44,7 @@
     id = "Linkedin"
     url = "https://www.linkedin.com/in/sandldan/"
     icon = "linkedin"
-    title = "linkedin"
+    title = "Linkedin"
     weight = 6
 #
 #[[socials]]

@@ -25,7 +25,7 @@
                 {{ end }}
             {{ end }}
 
-            {{ if .Params.meta | default .Site.Params.enablePostMeta | default .Site.Params.simplifyAboutPage }}
+            {{ if .Params.meta | default .Site.Params.enablePostMeta }}
                 {{ partial "components/post-meta.html" (dict "$" . "isHome" false) }}
             {{ end }}
 
@@ -51,9 +51,11 @@
             {{ partial "components/post-updated-badge.html" . }}
             {{ partial "components/post-gitinfo.html" . }}
             {{ partial "components/post-share.html" . }}
-            {{ partial "components/related-posts.html" . }}
-            {{ partial "components/post-tags.html" . }}
         {{ end }}
+
+        {{ partial "components/related-posts.html" . }}
+
+        {{ partial "components/post-tags.html" . }}
 
         {{ partial "components/minimal-footer.html" . }}
 

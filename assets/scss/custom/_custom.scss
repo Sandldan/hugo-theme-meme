@@ -1,3 +1,45 @@
 .menu-item {
   margin-left: 1.5em;
 }
+
+[data-theme="dark"] img {
+  filter: none;
+}
+
+.post {
+	img {
+		margin: 2em 0px 5px 0px;
+	}
+}
+
+figure {
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+
+	figcaption {
+		h4 {
+			margin-block-start: 0em;
+	    	margin-block-end: 0em;
+		}
+	}
+}
+
+figcaption {
+  border-left: 2px solid #ccc;
+  padding: 0.2em 10px;
+}
+
+figcaption:before {
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+figcaption h4 {
+	font-size: 1.1em;
+}
+
+.header-inner {
+    max-width: 40em !important;
+}

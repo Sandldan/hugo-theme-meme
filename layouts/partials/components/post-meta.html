@@ -76,6 +76,9 @@
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.readingTimeIcon "class" "post-meta-icon") }}
         <span class="post-meta-item reading-time">{{ $icon }}&nbsp;{{ $.ReadingTime }}&nbsp;{{ i18n "minute" $.ReadingTime }}</span>
     {{ end }}
+    {{ if $.Page.Params.bookRating }}
+        Rating: {{$.Page.Params.bookRating }}/10
+    {{ end }}
     {{ if and $.Site.Params.displayBusuanziPagePV (eq hugo.Environment "production") }}
         {{ if not $isHome }}
             {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.busuanziPagePVIcon "class" "post-meta-icon") }}

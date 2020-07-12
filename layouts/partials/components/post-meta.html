@@ -11,7 +11,7 @@
     {{ end }}
     {{ if and $.Site.Params.displayExpiredDate (not $.ExpiryDate.IsZero) }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.expiredDateIcon "class" "post-meta-icon") }}
-        <time datetime="{{ $.ExpiryDate.Format "2006-01-02T15:04:05-07:00" }}" class="post-meta-item expired">{{ $icon }}&nbsp;{{ $.ExpiryDate.Format $.Site.Params.postMetaDateFormat }}</time>
+        <time datetime="{{ $.ExpiryDate.Format "2006-01-02T15:04:05-07:00" }}" class="post-meta-item expired" title="Expired">{{ $icon }}&nbsp;{{ $.ExpiryDate.Format $.Site.Params.postMetaDateFormat }}</time>
     {{ end }}
     {{ if $.Site.Params.displayCategory }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.categoryIcon "class" "post-meta-icon") }}
@@ -70,14 +70,19 @@
     {{ end }}
     {{ if $.Site.Params.displayWordCount }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.wordCountIcon "class" "post-meta-icon") }}
-        <span class="post-meta-item wordcount">{{ $icon }}&nbsp;{{ $.WordCount }}</span>
+        <span class="post-meta-item wordcount" title="Word count">{{ $icon }}&nbsp;{{ $.WordCount }}</span>
     {{ end }}
     {{ if $.Site.Params.displayReadingTime }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.readingTimeIcon "class" "post-meta-icon") }}
-        <span class="post-meta-item reading-time">{{ $icon }}&nbsp;{{ $.ReadingTime }}&nbsp;{{ i18n "minute" $.ReadingTime }}</span>
+        <span class="post-meta-item reading-time" title="Reading time">{{ $icon }}&nbsp;{{ $.ReadingTime }}&nbsp;{{ i18n "minute" $.ReadingTime }}</span>
     {{ end }}
     {{ if $.Page.Params.bookRating }}
-        Rating: {{$.Page.Params.bookRating }}/10
+        {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.bookRatingIcon "class" "post-meta-icon") }}
+        <span class="post-meta-item reading-time" title="Rating">{{ $icon }}&nbsp;{{$.Page.Params.bookRating }}/10
+    {{ end }}
+    {{ if $.Page.Params.author }}
+        {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.author "class" "post-meta-icon") }}
+        <span class="post-meta-item reading-time" title="Author">{{ $icon }}&nbsp;{{$.Page.Params.author }}
     {{ end }}
     {{ if and $.Site.Params.displayBusuanziPagePV (eq hugo.Environment "production") }}
         {{ if not $isHome }}

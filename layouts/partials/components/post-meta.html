@@ -78,7 +78,14 @@
     {{ end }}
     {{ if $.Page.Params.bookRating }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.bookRatingIcon "class" "post-meta-icon") }}
-        <span class="post-meta-item reading-time" title="Rating">{{ $icon }}&nbsp;{{$.Page.Params.bookRating }}/10
+        <span class="post-meta-item" title="Rating">{{ $icon }}&nbsp;{{$.Page.Params.bookRating }}/10</span>
+    {{ end }}
+    {{ if $.Page.Params.ISBN }}
+        <span class="post-meta-item" title="ISBN">ISBN:&nbsp;{{$.Page.Params.ISBN }}</span>
+    {{ end }}
+    {{ if $.Page.Params.amazon }}
+        {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.amazonIcon "class" "post-meta-icon") }}
+        <span class="post-meta-item" title="Amazon">{{ $icon }}&nbsp;<a target="_blank" href="{{$.Page.Params.amazon }}">Amazon</a></span>
     {{ end }}
     {{ if $.Page.Params.author }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.author "class" "post-meta-icon") }}

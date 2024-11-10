@@ -71,6 +71,7 @@
     {{ if $.Params.displayWordCount | default $.Site.Params.displayWordCount }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.wordCountIcon "class" "post-meta-icon") }}
         <span class="post-meta-item wordcount" title="Word count">{{ $icon }}&nbsp;{{ $.WordCount }}</span>
+        <span class="post-meta-item wordcount" title="Word count">{{ $icon }}&nbsp;{{ $.WordCount }}</span>
     {{ end }}
     {{ if $.Params.displayReadingTime | default $.Site.Params.displayReadingTime }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.readingTimeIcon "class" "post-meta-icon") }}

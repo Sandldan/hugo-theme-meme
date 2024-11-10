@@ -28,6 +28,16 @@ blockquote {
   }
 }
 
+ul {
+  list-style-position: outside; /* Ensures list markers are on the outside */
+  padding-left: 20px; /* Adds space for the bullet points */
+  text-align: left; /* Left-aligns the text */
+}
+
+li {
+  text-align: left; /* Left-aligns each list item */
+}
+
 p {
   margin-bottom: 50px;
 }
